@@ -12,7 +12,15 @@
             <input type="text" name="text">
             <button id="gspeech" class="say">Say It</button>
             <audio id="player1" src="" class="speech" hidden></audio>
+            <button id="search_word">Search Word</button>
+            <button id="output_today_word_list">Output Today Word List</button>
+            <br/>
+
+            <p id='word_result'></p>
+            <p id='today_word_list'></p>
         </div>
+
+        <hr/>
 
         <div>
             <input type="text" name='wordinput'>
@@ -21,11 +29,45 @@
             <button id='show'>Show</button>
             <button id='next'>Next</button>
             <span id='word'></span>
+            <button id='learn_today_words'>Learn Today Wrods</button>
         </div>
 
-    </body>
+      
+    
+        <div>
+            <button id='showWordList'>Show word list</button>
+            <p id='wordList'></p>
+        </div>
+
+        <div>
+            <button id='showReviewWordList'>Show review word list</button>
+            <p id='reviewWordList'></p>
+        </div>
+
+        <hr/>
+        
+        <div>
+            <span id='reading_word'></span>
+            <button id='reading_speak'>Speak</button>
+            <button id='reading_not_know'>Don't Know</button>
+            <button id='reading_next'>Next</button>
+            <button id='reading_learn_today_words'>Learn Today Wrods</button>
+            
+            <br/>
+
+            <button id='show_reading_word_list'>Show Reading Word List</button>
+            <p id='reading_word_list'></p>
+
+            <br/>
+
+            <button id='show_reading_review_word_list'>Show Reading Review word List</button>
+            <p id='reading_review_word_list'></p>
+
+        </div>
+
+    </body>   
     <script src="https://code.responsivevoice.org/responsivevoice.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
-    <script src="./index.js">  </script>
+    <script src="./index.js">  </script> 
 </html>
