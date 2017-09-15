@@ -115,11 +115,8 @@ $(document).ready(function (){
 
     $('#check').on('click', function () {
         var inputWord = $('input[name="wordinput"]').val();
-        if (inputWord === currentWord) {
-            alert("true");
-
-        }
-        alert();
+        $('#check_result').text(inputWord === currentWord);
+        
     });
 
     $('#show').on('click', function() {
@@ -131,6 +128,7 @@ $(document).ready(function (){
     
     $('#next').on('click', function(){
         goToNextWord();
+        $('#check_result').text();
     });
 
     $('#learn_today_words').on('click', function () {
