@@ -63,6 +63,8 @@ function goToNextReadingWord () {
 }
 
 function init () {
+	index = 0
+	reading_index = 0
 	reorderWordList(wordList);
 	reorderWordList(reading_wordList);
 	goToNextWord();
