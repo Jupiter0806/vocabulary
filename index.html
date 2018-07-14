@@ -10,11 +10,14 @@
     Test html
 
     <div id="container">
-        <input type="text" name="text">
+        <input type="text" name="text" style="width: 400px" > <br/>
         <button id="gspeech" class="say">Say It</button>
         <audio id="player1" src="" class="speech" hidden></audio>
         <button id="search_word">Search Word</button>
         <button id="output_today_word_list">Output Today Word List</button>
+        <button id="add">Add</button>
+        <button id="toggle_spellcheck">Toggle spell check</button>
+        Spell check <span id="spellcheck_status"></span>
         <br/>
 
         <p id='word_result'></p>
@@ -24,7 +27,7 @@
     <hr/>
 
     <div>
-        <input type="text" name='wordinput'>
+        <input type="text" name='wordinput'style="width: 400px" > <br/>
         <button id='speak'>Speak</button>
         <button id='check'>Check</button>
         <button id='show'>Show</button>

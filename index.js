@@ -22,6 +22,8 @@ var reading_needReviewWordList = [];
 
 var todayWordList = [];
 
+var spellcheck = true
+
 function getNextWord () {
 	return wordList[index++];
 }
@@ -70,6 +72,7 @@ function init () {
 	goToNextWord();
 	goToNextReadingWord();
 	setUpWordList();
+	updateSpellcheckStatus();
 }
 
 function getWordDefinition (word) {
@@ -84,6 +87,12 @@ function getWordDefinition (word) {
 		}
 	};
 	xmlHttp.send(null);
+}
+
+function updateSpellcheckStatus() {
+	$("input[name=\"text\"]").attr("spellcheck", spellcheck)
+	$("input[name=\"wordinput\"]").attr("spellcheck", spellcheck)
+	$("#spellcheck_status").html(spellcheck + "")
 }
 
 $(document).ready(function () {
@@ -108,6 +117,18 @@ $(document).ready(function () {
 	$("#output_today_word_list").on("click", function () {
 		$("#today_word_list").text(todayWordList.join(";"));
 	});
+
+	$("#add").on("click", function () {
+		var inputWord = $("input[name=\"text\"]").val();
+		if (!todayWordList.includes(inputWord)) {
+			todayWordList.push(inputWord)
+		}
+	})
+
+	$("#toggle_spellcheck").on("click", function () {
+		spellcheck = !spellcheck
+		updateSpellcheckStatus()
+	})
 
 	$("#speak").on("click", function () {
 		if (currentWord) {
